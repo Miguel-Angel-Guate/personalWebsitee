@@ -214,6 +214,7 @@ const addContact = `
 
         })
         document.querySelector('#but23').addEventListener('click', () => {
+               console.log('but23');
                
                
 
