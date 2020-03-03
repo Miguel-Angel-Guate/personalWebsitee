@@ -219,20 +219,23 @@ const addContact = `
                      behavior: 'smooth'
 
               });
-       document.querySelector('.but22').addEventListener('click', () =>{
-              document.querySelector('#main').innerHTML = firstSection;
-              scrollIntoView({
-                      top: 0,
-                     behavior: 'smooth'
-
-              });
+              document.querySelector('.but22').addEventListener('click' ()=>{
+                     console.log('.but22');
+                     document.querySelector('#main').innerHTML = firstSection;
+                     document.querySelector('#firstSection').scrollIntoView({
+                      
+                            behavior: 'smooth'
+       
+                     });
+              })
+       
        })
               
                      });
               
                      
                
-              });
+       
              
         
  
