@@ -219,11 +219,15 @@ const addContact = `
                      behavior: 'smooth'
 
               });
-             
+              
+       
+              
               })
+              
        
        })
-              
+       
+           
                      
               
                      
