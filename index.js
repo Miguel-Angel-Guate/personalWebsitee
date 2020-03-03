@@ -1,7 +1,7 @@
  const firstSection = `
 <section id="one">
        
-       <div id="page2">2
+       <div id="page2">
               <h1 class="titlee">About Me</h1>
               <div id="describeee">
                      <div class="im">
@@ -219,19 +219,12 @@ const addContact = `
                      behavior: 'smooth'
 
               });
-              document.querySelector('.but22').addEventListener('click' ()=>{
-                     console.log('.but22');
-                     document.querySelector('#main').innerHTML = firstSection;
-                     document.querySelector('#firstSection').scrollIntoView({
-                      
-                            behavior: 'smooth'
-       
-                     });
+             
               })
        
        })
               
-                     });
+                     
               
                      
                
