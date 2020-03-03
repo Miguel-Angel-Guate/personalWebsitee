@@ -1,10 +1,8 @@
- 
- 
-const firstSection = `
+ const firstSection = `
 <section id="one">
        <div class="nav">
               <span class="span1">
-                     <button class="but22">Home</button>
+                     <button id="but33" class="but22">Home</button>
                      <button  class="but22">About me</button>
                      <button id="but23" class="but22">Contact</button>
        
@@ -56,6 +54,59 @@ const firstSection = `
        
        
                      <div id="tecn">
+
+
+                     <div class="progress">
+                     <p>HTML5</p>
+                            <progress id="html5" max="100" value="50"></progress>
+                            <span></span>
+                     
+                     </div>
+               <div class="progress">
+                   <p>Javascript</p>
+                   <progress id="javascript" max="100" value="49"></progress>
+                   <span></span>
+                   
+               </div>
+                     
+                  <div class="progress">
+                     <p>NodeJs</p>
+                            <progress id="Node" max="100" value="45"></progress>
+                            <span></span>
+                     
+                     </div>
+                     
+                     <div class="clear"></div>
+                     
+                     <div class="progress">
+                     <p>CSS</p>
+                            <progress id="css" max="100" value="56"></progress>
+                            <span></span>
+                     
+                     </div>
+              
+                     <div class="progress">
+                     <p>Python</p>
+                            <progress id="python" max="100" value="32"></progress>
+                            <span></span>
+                     
+                     </div>
+                     <div class="clear"></div>
+                            
+                     
+                     
+                     <div class="progress">
+                     <p>Node.js</p>
+                            <progress id="react" max="100" value="36"></progress>
+                            <span></span>
+                     
+                     </div>
+
+
+
+
+                     </div>
+                     
                      
        
        
@@ -67,54 +118,105 @@ const firstSection = `
        </div>
        
        
-                     </div>
+                     
        
        
        
        
        
-              </div>
+              
 </section>
 
 
+
 `;
-//document.querySelector('#main').innerHTML=firstSection;
-document.querySelector('#but1').addEventListener('click', ()=>{
-       console.log('#but1')
-       document.querySelector('#main').innerHTML=firstSection;
-       document.querySelector('#main').scrollIntoView({
-              behavior: 'smooth'
-          });
-})
-function animateprogress (id, val){		
 
+const addContact = ` 
+<section id="sectionForm">
+       <div class="titleForm">
+             <i> <h1>
+                     Contact
+              </h1></i>
 
-	var getRequestAnimationFrame = function () {  /* <------- Declaro getRequestAnimationFrame intentando obtener la m�xima compatibilidad con todos los navegadores */
-		return window.requestAnimationFrame ||
-		window.webkitRequestAnimationFrame ||   
-		window.mozRequestAnimationFrame ||
-		window.oRequestAnimationFrame ||
-		window.msRequestAnimationFrame ||
-		function ( callback ){
-			window.setTimeout(enroute, 1 / 60 * 1000);
-		};
-		
-	};
-	
-	var fpAnimationFrame = getRequestAnimationFrame();   
-	var i = 0;
-	var animacion = function () {
-			
-	if (i<=val) 
-		{
-			document.querySelector(id).setAttribute("value",i);      /* <----  Incremento el valor de la barra de progreso */
-			document.querySelector(id+"+ span").innerHTML = i+"%";     /* <---- Incremento el porcentaje y lo muestro en la etiqueta span */
-			i++;
-			fpAnimationFrame(animacion);          /* <------------------ Mientras que el contador no llega al porcentaje fijado la funci�n vuelve a llamarse con fpAnimationFrame     */
-		}
-										
-	}
+       </div>
+       <div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="img/img-01.png" alt="IMG">
+			</div>
 
-		fpAnimationFrame(animacion);   /*  <---- Llamo la funci�n animaci�n por primera vez usando fpAnimationFrame para que se ejecute a 60fps  */
+			<form class="contact1-form validate-form">
+				<span class="contact1-form-title">
+					Get in touch
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "Name is required">
+					<input class="input1" type="text" name="name" placeholder="Name">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input class="input1" type="text" name="email" placeholder="Email">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<input class="input1" type="text" name="subject" placeholder="Subject">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Message is required">
+					<textarea class="input1" name="message" placeholder="Message"></textarea>
+                                   <span class="shadow-input1"></span>
+                                   <button><input type="submit"></button>
+				</div>
+
 				
-}
+			</form>
+		</div>
+	</div>
+
+
+</section>
+`;
+
+
+//  const goHome = ` 
+// <header id="homee">
+// <div class="colorchange">
+//        <h1 class="inverter">
+//               I´m Miguel Angel <br>
+//               <button id="but1" >View my personal website</button>
+
+              
+
+//        </h1>
+
+// </div>
+
+// </header>`;
+ //document.querySelector('#main').innerHTML=firstSection;
+ document.querySelector('#but11').addEventListener('click', () => {
+        console.log('#but11')
+
+        document.querySelector('#main').innerHTML = firstSection;
+        document.querySelector('#main').innerHTML
+        document.querySelector('#main').scrollIntoView({
+               behavior: 'smooth'
+        });
+        document.querySelector('#but33').addEventListener('click', () => {
+
+               //  document.querySelector('#main').innerHTML = goHome;
+               document.querySelector('#homee').scrollIntoView({
+                      top: 0,
+                      behavior: 'smooth'
+               });
+
+        })
+        document.querySelector('#but23').addEventListener('click', () => {
+               
+               
+
+               
+        });
+ })
