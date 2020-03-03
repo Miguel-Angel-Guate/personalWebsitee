@@ -1,13 +1,5 @@
  const firstSection = `
 <section id="one">
-       <div class="nav">
-              <span class="span1">
-                     <button id="but33" class="but22">Home</button>
-                     <button  class="but22">About me</button>
-                     <button id="but23" class="but22">Contact</button>
-       
-              </span>
-       </div>
        
        <div id="page2">2
               <h1 class="titlee">About Me</h1>
@@ -133,14 +125,11 @@
 
 const addContact = ` 
 <section id="sectionForm">
-       <div class="titleForm">
-             <i> <h1>
-                     Contact
-              </h1></i>
-
-       </div>
+       
        <div class="contact1">
-		<div class="container-contact1">
+       
+              <div class="container-contact1">
+              
 			<div class="contact1-pic js-tilt" data-tilt>
 				<img src="img/img-01.png" alt="IMG">
 			</div>
@@ -168,8 +157,13 @@ const addContact = `
 				<div class="wrap-input1 validate-input" data-validate = "Message is required">
 					<textarea class="input1" name="message" placeholder="Message"></textarea>
                                    <span class="shadow-input1"></span>
-                                   <button><input type="submit"></button>
+                                   
+                            </div>
+                            <div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<input class="input1" type="submit">
+					<span class="shadow-input1"></span>
 				</div>
+                            
 
 				
 			</form>
@@ -178,7 +172,10 @@ const addContact = `
 
 
 </section>
+
 `;
+
+
 
 
 //  const goHome = ` 
@@ -200,7 +197,8 @@ const addContact = `
         console.log('#but11')
 
         document.querySelector('#main').innerHTML = firstSection;
-        document.querySelector('#main').innerHTML
+        //seleccionamos el navBar y le cambiamos de display none a block para que se muestre
+        document.querySelector('#navBar').style.display='block';
         document.querySelector('#main').scrollIntoView({
                behavior: 'smooth'
         });
@@ -214,10 +212,27 @@ const addContact = `
 
         })
         document.querySelector('#but23').addEventListener('click', () => {
-               console.log('but23');
-               
-               
+               console.log('but23')
+               document.querySelector('#main').innerHTML = addContact;
+               document.querySelector('#main').scrollIntoView({
+                      
+                     behavior: 'smooth'
 
+              });
+       document.querySelector('.but22').addEventListener('click', () =>{
+              document.querySelector('#main').innerHTML = firstSection;
+              scrollIntoView({
+                      top: 0,
+                     behavior: 'smooth'
+
+              });
+       })
+              
+                     });
+              
+                     
                
-        });
- })
+              });
+             
+        
+ 
